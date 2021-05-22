@@ -9,6 +9,8 @@ Can be installed with
 
   pip3 install --target=temp_dir mp_packaging_experiment --implementation=micropython --python-version=1 --only-binary=:all:
 
+Yes, it's a mouthful, but https://github.com/aivarannamaa/minipip can turn this into ``minipip install --target=temp_dir mp_packaging_experiment``. 
+
 Note that micropython1 gets split into two arguments: ``--implementation=micropython`` and ``--python-version=1`` (https://discuss.python.org/t/how-does-implementation-option-of-pip-install-work/8830).
 
 The argument ``--only-binary=:all:`` is required by ``pip`` whenever ``--implementation`` or ``--python-version`` is used. This means all dependencies must also have wheels with same Python version tag.
